@@ -8,8 +8,8 @@ class ProfileUserService {
             id: user_id
          }
       })
-
-      return user
+      delete user.senha
+      return user 
    }
 }
 

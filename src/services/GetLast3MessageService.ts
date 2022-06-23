@@ -9,10 +9,10 @@ class GetLast3MessageService {
             created_at: "desc"
          },
          include: {
-            user: true
+            user: true,
          }
       })
-
+      messages.map(message => delete message.user.senha)
       return messages
    }
 }
